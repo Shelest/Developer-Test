@@ -13,6 +13,27 @@ Your solution:
 
 ###### if we type in our console your function and repeat([1,2,3]) then the result should be [1,2,3,1,2,3,1,2,3] 
 
+<b>Answer:</b>
+
+```javascript
+
+function repeat(array) {
+	const repeatAmount = 3;
+	const result = new Array();
+    
+	for(let i = 0; i < repeatAmount; i++ ) {
+		for(let j in array ) {    
+        	result.push(array[j]);
+        }
+    }
+
+    return result;
+}
+
+repeat([1,2,3]);
+
+```
+
 ### Task 2:
 Make this work (no vowels, lowercase except the first letter):
 ```javascript
@@ -22,6 +43,18 @@ Your solution:
 
 ###### if we type in our console your function and reformat("liMeSHArp DeveLoper TEST") then the result should be Lmshrp dvlpr tst
 
+<b>Answer:</b>
+
+```javascript
+
+    function reformat(subject) {
+        const sub = subject.replace(/[aeiou]/gi, '').toLowerCase();
+        return sub.charAt(0).toUpperCase() + sub.slice(1);
+    }
+    
+    reformat("liMeSHArp DeveLoper TEST")
+
+```
 
 ### Task 3 (optional, for bonus points):
 Make this work (without using any built in functions, only a `for` loop, return the next binary number in a string or as an array)
@@ -39,4 +72,3 @@ Your solution:
 
 ###### if we type in our console your function and next_binary_number([1,0,0,0,0,0,0,0,0,1]) then the result should look like 1,0,0,0,0,0,0,0,1,0 (or as an array).
 
-###### If you get invited to the first interview read the What to expect.md file.
