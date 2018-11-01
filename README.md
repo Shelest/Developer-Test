@@ -16,14 +16,13 @@ Your solution:
 <b>Answer:</b>
 
 ```javascript
-
 function repeat(array) {
-	const repeatAmount = 3;
-	const result = new Array();
+    let repeatAmount = 3;
+    let result = new Array();
     
-	for(let i = 0; i < repeatAmount; i++ ) {
-		for(let j in array ) {    
-        	result.push(array[j]);
+    for(let i = 0; i < repeatAmount; i++ ) {
+        for(let j in array ) {    
+           result.push(array[j]);
         }
     }
 
@@ -31,7 +30,6 @@ function repeat(array) {
 }
 
 repeat([1,2,3]);
-
 ```
 
 ### Task 2:
@@ -46,14 +44,12 @@ Your solution:
 <b>Answer:</b>
 
 ```javascript
+function reformat(subject) {
+    let sub = subject.replace(/[aeiou]/gi, '').toLowerCase();
+    return sub.charAt(0).toUpperCase() + sub.slice(1);
+}
 
-    function reformat(subject) {
-        const sub = subject.replace(/[aeiou]/gi, '').toLowerCase();
-        return sub.charAt(0).toUpperCase() + sub.slice(1);
-    }
-    
-    reformat("liMeSHArp DeveLoper TEST")
-
+reformat("liMeSHArp DeveLoper TEST")
 ```
 
 ### Task 3 (optional, for bonus points):
